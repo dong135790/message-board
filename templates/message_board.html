@@ -1,0 +1,19 @@
+<!doctype html>
+  <title>Message Board</title>
+
+  <h2>Messages:</h2>
+   <ul>
+     {% for item in items %}
+        <li>{{ item.message }} -- by {{item.author}}</li>
+     {% endfor %}
+   </ul>
+
+  <form action="/messages">
+    <label>Message</label>
+    <input type="text" name="message"><br><br>
+    <label>Author</label>
+    <input type="text" name="author"><br><br>
+    <input type="submit" value="Post">
+   </form> 
+
+</html>
